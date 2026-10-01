@@ -33,8 +33,17 @@
     <main id="contenido" class="container" tabindex="-1">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <h1 id="hero-title">Soporte TI para tu equipo</h1>
+        <p>
+          El soporte de TI abarca la asistencia y el mantenimiento técnico necesario para
+          asegurar que la infraestructura digital de un negocio funcione de forma continua
+          y sin interrupciones. Sus pilares principales suelen incluir:
+        </p>
+        <li><strong>Resolución de Incidencias (Software y Hardware)</strong></li>
+        <li><strong>Atención a Distancia y Presencial</strong></li>
+        <li><strong>Mantenimiento Proactivo y Preventivo</strong></li>
+
         <p>Consulta nuestros servicios y describe tu incidencia.</p>
-        <a class="button" href="#soporte">Solicitar soporte</a>
+        <a class="btns btn-1 btns-sep" href="#soporte">Solicitar soporte</a>
       </section>
       <section id="servicios" aria-labelledby="services-title">
         <h2 id="services-title">Servicios de soporte</h2>
@@ -42,30 +51,80 @@
           <article class="service-card">
             <h3>Soporte de red</h3>
             <p>Diagnóstico de problemas de conectividad.</p>
+            <p>¿Qué cubre exactamente el Soporte de red?</p>
+            <p>¿Cuándo debo usar el enlace de "Solicitar soporte de red"?</p>
+            <p>¿Qué datos debo tener listos antes de solicitar el soporte de red?</p>
             <a href="#soporte">Solicitar soporte de red</a>
           </article>
           <article class="service-card service-card--featured">
             <h3>Soporte prioritario</h3>
             <p>Evaluación de incidencias que impiden continuar el trabajo.</p>
+            <p>¿Qué pasa si mi reporte no es una emergencia real?</p>
+            <p>¿Qué tipo de casos califican para el Soporte prioritario?</p>
+            <p>¿Qué pasa si mi reporte no es una emergencia real?</p>
             <a href="#soporte">Solicitar atención prioritaria</a>
           </article>
           <article class="service-card">
             <h3>Hardware</h3>
             <p>Ayuda para equipos.</p>
+            <p>¿Cómo solicito el soporte para mi equipo?</p>
+            <p>¿Si una aplicación no abre, debo reportarlo en Hardware?</p>
+            <p>¿Qué debo hacer si derramo líquido sobre mi laptop?</p>
+            <p>
+              ¿Cuánto tiempo tarda la reparación si mi equipo necesita un cambio de pieza?
+            </p>
             <a href="#soporte">Solicitar soporte de hardware</a>
           </article>
           <article class="service-card">
             <h3>Software</h3>
             <p>Ayuda para aplicaciones.</p>
+            <p>¿Qué tipo de asistencia ofrece el Soporte de software?</p>
+            <p>¿Cuándo debo usar el enlace de "Solicitar soporte de software"?</p>
+            <p>¿Este canal sirve para solicitar la instalación de un programa nuevo?</p>
+            <p>
+              ¿Qué hago si no puedo entrar a una aplicación porque olvidé mi contraseña?
+            </p>
+            <p>¿Si el sistema operativo de mi computadora no carga, se reporta aquí?</p>
             <a href="#soporte">Solicitar soporte de software</a>
           </article>
         </div>
       </section>
       <section id="soporte" aria-labelledby="support-title">
-        <h2 id="support-title">Solicitud de soporte</h2>
+        <h2 id="support-title" style="text-align: center; color: blue">
+          Solicitud de soporte
+        </h2>
+        <div class="containers">
+          <!--  Contacto -->
+          <section class="info-section">
+            <h2>Información de Contacto</h2>
+            <ul>
+              <li><strong>Teléfono:</strong> +51 992 493 774</li>
+              <li>
+                <strong>Correo:</strong>
+                <a style="color: blue" href="mailto:rolygrd@gmail.com"
+                  >rolygrd@gmail.com</a
+                >
+              </li>
+              <li><strong>Dirección:</strong> Av. Siempre Viva 742, Lima, Perú</li>
+            </ul>
+          </section>
+
+          <!--  Horarios -->
+          <section class="info-section">
+            <h2>Horarios de Atención</h2>
+            <ul>
+              <li><span class="dias">Lunes a Viernes:</span> 08:00 AM - 06:00 PM</li>
+              <li><span class="dias">Sábados:</span> 09:00 AM - 02:00 PM</li>
+              <li><span class="dias">Domingos:</span> Cerrado</li>
+              <li>
+                <span class="dias">Feriados:</span> Horario especial (Sujeto a cambios)
+              </li>
+            </ul>
+          </section>
+        </div>
         <form class="support-form" id="support-form">
           <p class="form-note">
-            Los campos con * son obligatorios. Esta demostración no envía ni almacena
+            Los campos con (*) son obligatorios. Esta demostración no envía ni almacena
             solicitudes.
           </p>
           <fieldset>
@@ -78,6 +137,7 @@
               required
               minlength="3"
               autocomplete="name"
+              onfocus="this.placeholder = ''"
               aria-describedby="nombre-help"
             />
             <small id="nombre-help">Escribe al menos 3 caracteres.</small>
@@ -88,6 +148,7 @@
               name="email"
               type="email"
               required
+              placeholder="ana@example.test"
               autocomplete="email"
               aria-describedby="email-help"
             />
@@ -126,7 +187,13 @@
               contraseñas.</small
             >
           </fieldset>
-          <button id="submit-demo" type="submit" disabled class="btn liquid">
+          <button
+            id="submit-demo"
+            type="submit"
+            disabled
+            class="btn liquid"
+            onclick="alert('SOLICITUD RECIBIDA')"
+          >
             Validar solicitud de prueba
           </button>
           <p id="form-status" role="status" aria-live="polite"></p>
