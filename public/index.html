@@ -21,16 +21,19 @@
           aria-controls="nav-menu"
           aria-expanded="false"
         >
-          Menú
+          ≡ 
         </button>
-        <ul class="navbar__menu" id="nav-menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#soporte">Solicitar soporte</a></li>
+        
+        <ul class="navbar__menu" id="nav-menu" class="hover">
+          <li class="navbar__li"><a href="#inicio">Inicio</a></li>
+          <li class="navbar__li"><a href="#servicios">Servicios</a></li>
+          <li class="navbar__li"><a href="#catalogo">Catalogo</a></li>
+          <li class="navbar__li"><a href="#soporte">Solicitar soporte</a></li>
         </ul>
       </nav>
     </header>
     <main id="contenido" class="container" tabindex="-1">
+
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <h1 id="hero-title">Soporte TI para tu equipo</h1>
         <p>
@@ -45,7 +48,17 @@
         <p>Consulta nuestros servicios y describe tu incidencia.</p>
         <a class="btns btn-1 btns-sep" href="#soporte">Solicitar soporte</a>
       </section>
+
+      <!--CATALOGO-->
+      <section id="catalogo" class="seccion">
+      <h2>CATALOGO</h2>
+       <a href="#catalogo"></a>
+
+      </section>
+
+      <!--SERVICIOS QUE SE DA DE SOPORTE DE RED Y SOFTWARE-->
       <section id="servicios" aria-labelledby="services-title">
+         <a href="#servicios"></a>
         <h2 id="services-title">Servicios de soporte</h2>
         <div class="services__grid">
           <article class="service-card">
@@ -89,6 +102,8 @@
           </article>
         </div>
       </section>
+
+      <!--CONTACTO-->
       <section id="soporte" aria-labelledby="support-title">
         <h2 id="support-title" style="text-align: center; color: blue">
           Solicitud de soporte
@@ -122,6 +137,8 @@
             </ul>
           </section>
         </div>
+        
+        <!--FORMULARIO-->
         <form class="support-form" id="support-form">
           <p class="form-note">
             Los campos con (*) son obligatorios. Esta demostración no envía ni almacena
